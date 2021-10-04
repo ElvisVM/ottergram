@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'helvetica';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/helvetica-compressed-5871d14b6903a.otf');
+    src: url('fonts/Helvetica.ttf') format('truetype');
+}
+
 a[href="#"]{
     text-decoration: none;
 }
@@ -13,13 +21,19 @@ body{
 }
 
 .thumbnail-item {
-    display: block;
     border: 1px solid rgb(100%, 100%, 100%);
     border: 1px solid rgba(100%, 100%, 100%, 0.8);
+    display: inline-block;
+    width: 120px;
+}
+
+.thumbnail-item + .thumbnail-item{
+    margin-top: 10px;
 }
 
 .thumbnail-list {
     list-style: none;
+    padding: 0;
 }
 
 .thumbnail-title {
@@ -29,4 +43,16 @@ body{
     font-size: 18px;
     margin: 0;
     padding: 0.4em 1em;
+}
+
+.logo-text {
+    background: white;
+    font-size: 37px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: helvetica;
+}
+
+.detail-image{
+    width: 90%;
 }
