@@ -12,7 +12,19 @@ a[href="#"]{
 
 body{
     font-size: 10px;
+    display: flex;
+    flex-direction: column;
     background: rgb(149, 194, 215);
+}
+
+.main-header{
+    flex: 0 1 auto;
+}
+
+.main-content{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .thumbnail-image {
@@ -32,8 +44,17 @@ body{
 }
 
 .thumbnail-list {
+    flex: 0 1 auto;
     list-style: none;
+    order: 2;
+
+    overflow-x: auto;
     padding: 0;
+    white-space: nowrap;
+}
+
+html, body {
+    height: 100%;
 }
 
 .thumbnail-title {
@@ -55,4 +76,8 @@ body{
 
 .detail-image{
     width: 90%;
+}
+
+.detail-image-container{
+    flex: 1 1 auto;
 }
