@@ -81,4 +81,21 @@ html, body {
 
 .detail-image-container{
     flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-image-frame{
+    position: relative;
+    text-align: center;
+}
+
+.detail-image-title{
+    color: rgb(0, 0, 255);
+    font-size: 40px;
+    position: absolute;
+    bottom: -16px;
+    left: 4px;
+    text-shadow: rgb(100%, 0%, 0%) 2px 2px 0px;
 }
