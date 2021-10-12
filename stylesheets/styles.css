@@ -6,26 +6,6 @@
     src: url('fonts/Helvetica.ttf') format('truetype');
 }
 
-@media all and (min-width: 768px) {
-    .main-content{
-        flex-direction: row;
-        overflow: hidden;
-    }
-
-    .thumbnail-list{
-        flex-direction: column;
-        order: 0;
-    }
-
-    .thumbnail-item{
-        max-width: 260px;
-    }
-    
-    .thumbnail-item + .thumbnail-item{
-        margin-top: 10px;
-    }
-}
-
 a[href="#"]{
     text-decoration: none;
 }
@@ -44,7 +24,7 @@ body{
 .main-content{
     flex: 1 1 auto;
     display: flex;
-    
+    flex-direction: column;
 }
 
 .thumbnail-image {
@@ -66,6 +46,7 @@ body{
     justify-content: space-between;
     list-style: none;
     order: 2;
+    flex-direction: row;
 
     overflow-x: auto;
     padding: 0;
@@ -116,4 +97,24 @@ html, body {
     bottom: -16px;
     left: 4px;
     text-shadow: rgb(100%, 0%, 0%) 2px 2px 0px;
+}
+
+@media all and (min-width: 768px) {
+    .main-content{
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .thumbnail-list{
+        flex-direction: column;
+        order: 2;
+    }
+
+    .thumbnail-item{
+        max-width: 260px;
+    }
+    
+    .thumbnail-item + .thumbnail-item{
+        margin-top: 10px;
+    }
 }
